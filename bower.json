@@ -1,0 +1,20 @@
+{
+  "name": "purescript-arb-instances",
+  "description": "Arbitrary and CoArbitrary instances for common data types",
+  "keywords": ["purescript"],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-maybe"       : "*",
+    "purescript-either"      : "*",
+    "purescript-tuples"      : "*",
+    "purescript-quickcheck"  : "*"
+  }
+}
