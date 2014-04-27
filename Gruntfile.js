@@ -6,22 +6,25 @@ module.exports = function(grunt) {
   
     libFiles: [
       "src/**/*.purs",
-      "bower_components/purescript-*/src/**/*.purs"
+      "bower_components/purescript-*/src/**/*.purs",
     ],
     
-    clean: ["tmp", "output"],
+    clean: ["output"],
   
-    pscMake: {
-      lib: {
-        src: ["<%=libFiles%>"]
-      },
-    },
+    pscMake: ["<%=libFiles%>"],
+    dotPsci: ["<%=libFiles%>"],
+    docgen: {
+        readme: {
+            src: "src/**/*.purs",
+            dest: "README.md"
+        }
+    }
 
-    dotPsci: ["<%=libFiles%>"]
   });
 
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-purescript");
- 
-  grunt.registerTask("default", ["pscMake:lib", "dotPsci"]);
+  
+  grunt.registerTask("make", ["pscMake", "dotPsci", "docgen"]);
+  grunt.registerTask("default", ["make"]);
 };
