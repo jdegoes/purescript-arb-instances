@@ -12,9 +12,10 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-maybe"       : "*",
-    "purescript-either"      : "*",
-    "purescript-tuples"      : "*",
-    "purescript-quickcheck"  : "*"
+    "purescript-maybe": "*",
+    "purescript-either": "*",
+    "purescript-tuples": "*",
+    "purescript-monoid": "*",
+    "purescript-quickcheck": "*"
   }
 }
