@@ -5,6 +5,7 @@
 ### Types
 
     data TestEither a b where
+      TestEither :: Either a b -> TestEither a b
 
 
 ### Type Class Instances
@@ -38,6 +39,7 @@
 ### Types
 
     data TestMaybe a where
+      TestMaybe :: Maybe a -> TestMaybe a
 
 
 ### Type Class Instances
@@ -73,6 +75,7 @@
 ### Types
 
     data TestTuple a b where
+      TestTuple :: Tuple a b -> TestTuple a b
 
 
 ### Type Class Instances
