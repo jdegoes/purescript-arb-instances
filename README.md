@@ -4,7 +4,7 @@
 
 ### Types
 
-    data TestEither a b where
+    newtype TestEither a b where
       TestEither :: Either a b -> TestEither a b
 
 
@@ -38,11 +38,13 @@
 
 ### Types
 
-    data TestMaybe a where
+    newtype TestMaybe a where
       TestMaybe :: Maybe a -> TestMaybe a
 
 
 ### Type Class Instances
+
+    instance altTestMaybe :: Alt TestMaybe
 
     instance alternativeTestMaybe :: Alternative TestMaybe
 
@@ -58,9 +60,13 @@
 
     instance functorTestMaybe :: Functor TestMaybe
 
+    instance monadPlusTestMaybe :: MonadPlus TestMaybe
+
     instance monadTestMaybe :: Monad TestMaybe
 
     instance ordTestMaybe :: (Ord a) => Ord (TestMaybe a)
+
+    instance plusTestMaybe :: Plus TestMaybe
 
     instance showTestMaybe :: (Show a, Show b) => Show (TestMaybe a)
 
@@ -74,7 +80,7 @@
 
 ### Types
 
-    data TestTuple a b where
+    newtype TestTuple a b where
       TestTuple :: Tuple a b -> TestTuple a b
 
 
