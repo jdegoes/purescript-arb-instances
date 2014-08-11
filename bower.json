@@ -15,7 +15,8 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-maybe": "*",
+    "purescript-control": "~0.2.0",
+    "purescript-maybe": "~0.2.0",
     "purescript-either": "*",
     "purescript-tuples": "*",
     "purescript-monoid": "*",
